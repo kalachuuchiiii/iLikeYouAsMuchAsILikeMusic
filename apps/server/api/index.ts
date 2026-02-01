@@ -1,11 +1,12 @@
 
 import express, { type Express } from 'express';
-import env from './src/config/env';
-import { connectDb } from './src/config';
-import appRouter from './src/routes/app.router';
-import { errorHandler } from './src/middlewares/error.middlewares';
+
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import { env } from 'process';
+import { connectDb } from '../src/config';
+import appRouter from '../src/routes/app.router';
+import { errorHandler } from '../src/middlewares/error.middlewares';
 
 declare global {
   namespace Express {
