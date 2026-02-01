@@ -2,7 +2,6 @@ import mongoose from "mongoose";
 import type { CredentialModel } from "../../types/credentials";
 import env from "../../config/env";
 import bcrypt from "bcryptjs";
-import type { ReceiptTurkishLiraIcon } from "lucide-react";
 
 export const credentialSchema = new mongoose.Schema({
     password: {
