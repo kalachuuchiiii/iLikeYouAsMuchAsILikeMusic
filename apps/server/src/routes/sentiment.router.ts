@@ -4,7 +4,7 @@ import { catchErrors } from "../middlewares/error.middlewares.js";
 import { verifyAccessToken } from "../middlewares/auth.middlewares.js";
 
 
-const sentimentRouter: Router = Router();
+const sentimentRouter = Router();
 
 sentimentRouter.post('/', catchErrors(createSentiment));
 sentimentRouter.get('/me/list', verifyAccessToken, catchErrors(getMySentiments));

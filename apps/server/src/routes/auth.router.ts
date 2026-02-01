@@ -4,7 +4,7 @@ import { getSession, refresh, signIn, signOut, signUp } from "../controllers/aut
 
 
 
-const authRouter: Router = Router();
+const authRouter = Router();
 
 authRouter.post('/sign-up', catchErrors(signUp));
 authRouter.post('/sign-in', catchErrors(signIn));
