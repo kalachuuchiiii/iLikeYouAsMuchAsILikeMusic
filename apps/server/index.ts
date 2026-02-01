@@ -5,9 +5,9 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
 import { connectDb } from './src/config/database.js';
-import appRouter from './src/routes/app.router';
-import { errorHandler } from './src/middlewares/error.middlewares';
-import env from './src/config/env';
+import appRouter from './src/routes/app.router.js';
+import { errorHandler } from './src/middlewares/error.middlewares.js';
+import env from './src/config/env.js';
 
 declare global {
   namespace Express {
