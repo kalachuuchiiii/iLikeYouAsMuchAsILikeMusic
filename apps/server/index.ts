@@ -3,10 +3,11 @@ import express, { type Express } from 'express';
 
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import { env } from 'process';
-import { connectDb } from './src/config/database';
+
+import { connectDb } from './src/config/database.js';
 import appRouter from './src/routes/app.router';
 import { errorHandler } from './src/middlewares/error.middlewares';
+import env from './src/config/env';
 
 declare global {
   namespace Express {
