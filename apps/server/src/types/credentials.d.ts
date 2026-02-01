@@ -1,5 +1,5 @@
 import type z from "zod";
-import type { credentialSchema } from "../models/credentials/credentials";
+import type { credentialSchema } from "../models/credentials/credentials.ts";
 import type { HydratedDocument } from "mongoose";
 
 
