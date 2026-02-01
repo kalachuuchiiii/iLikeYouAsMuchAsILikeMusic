@@ -1,21 +1,23 @@
 
+
+    
 import express, { type Express } from 'express';
 
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import env from '../src/config/env';
+import { connectDb } from '../src/config/database';
+import appRouter from '../src/routes/app.router';
+import { errorHandler } from '../src/middlewares/error.middlewares';
 
-import { connectDb } from './src/config/database.js';
-import appRouter from './src/routes/app.router.js';
-import { errorHandler } from './src/middlewares/error.middlewares.js';
-import env from './src/config/env.js';
 
-declare global {
-  namespace Express {
-    interface Request {
-      myId?: string
-    }
-  }
-}
+
+
+export const createServer = () => {
+
+
+
+
 
 const app: Express = express();
 app.use(cors({
@@ -34,8 +36,7 @@ app.use(errorHandler);
 
 const PORT = 3000;
 
-app.listen(PORT, () => {
-    console.log(`Listening at port ${PORT}`);
-})
+return app;
 
-export default app;
+
+}
