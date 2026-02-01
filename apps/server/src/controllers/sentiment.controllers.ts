@@ -4,8 +4,8 @@ import {
   UsernameSchema,
 } from "@repo/validators";
 import type { RequestHandler } from "express";
-import { NotFoundError } from "../errors/AppErrors";
-import Sentiment from "../models/sentiments/sentiments";
+import { NotFoundError } from "../errors/AppErrors.js";
+import Sentiment from "../models/sentiments/sentiments.js";
 import axios from "axios";
 import type {
   GetASingleSentimentResponse,
@@ -14,8 +14,8 @@ import type {
   SentimentDTO,
   SentimentDTOLite,
 } from "@repo/dtos";
-import User from "../models/user/user";
-import { ObjectIdSchema, QueryParamSchema } from "../validators/validators";
+import User from "../models/user/user.js";
+import { ObjectIdSchema, QueryParamSchema } from "../validators/validators.js";
 
 
 export const getASingleSentiment: RequestHandler = async(req, res) => {

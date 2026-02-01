@@ -1,6 +1,6 @@
 import { Router } from "express";
-import authRouter from "./auth.router";
-import sentimentRouter from "./sentiment.router";
+import authRouter from "./auth.router.js";
+import sentimentRouter from "./sentiment.router.js";
 
 
 const appRouter: Router = Router();

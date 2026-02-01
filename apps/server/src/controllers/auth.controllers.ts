@@ -1,13 +1,13 @@
 import { SignInFormSchema, SignUpFormSchema } from "@repo/validators";
 import type { RequestHandler } from "express";
-import User from "../models/user/user";
-import { ConflictError, NotFoundError } from "../errors/AppErrors";
-import { runWithSession } from "../helpers/db.helper";
-import Credential from "../models/credentials/credentials";
+import User from "../models/user/user.js";
+import { ConflictError, NotFoundError } from "../errors/AppErrors.js";
+import { runWithSession } from "../helpers/db.helper.js";
+import Credential from "../models/credentials/credentials.js";
 import jwt, { type Secret } from "jsonwebtoken";
-import env from "../config/env";
+import env from "../config/env.js";
 import ms from "ms";
-import { ObjectIdSchema } from "../validators/validators";
+import { ObjectIdSchema } from "../validators/validators.js";
 import type { AuthPayload } from "../types/auth";
 
 export const refresh: RequestHandler = async (req, res) => {

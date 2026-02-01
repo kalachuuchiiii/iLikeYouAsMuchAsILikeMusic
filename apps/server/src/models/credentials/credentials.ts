@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import type { CredentialModel } from "../../types/credentials";
-import env from "../../config/env";
+import env from "../../config/env.js";
 import bcrypt from "bcryptjs";
 
 export const credentialSchema = new mongoose.Schema({

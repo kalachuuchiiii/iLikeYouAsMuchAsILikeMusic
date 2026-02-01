@@ -1,8 +1,8 @@
 import type { RequestHandler } from "express";
-import { catchErrors } from "./error.middlewares";
+import { catchErrors } from "./error.middlewares.js";
 import jwt from "jsonwebtoken";
 import type { AuthPayload } from "../types/auth";
-import env from "../config/env";
+import env from "../config/env.js";
 
 
 export const verifyAccessToken: RequestHandler = catchErrors(async(req, res, next) => {

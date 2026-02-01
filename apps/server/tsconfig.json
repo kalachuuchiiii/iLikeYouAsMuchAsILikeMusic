@@ -38,6 +38,7 @@
     // Recommended Options
     "strict": true,
     "esModuleInterop": true,
+    "allowJs": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
 

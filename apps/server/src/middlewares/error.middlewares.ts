@@ -1,5 +1,5 @@
 import type { ErrorRequestHandler, RequestHandler } from "express";
-import { AppError } from "../errors/AppErrors";
+import { AppError } from "../errors/AppErrors.js";
 import z, { success } from "zod";
 
 

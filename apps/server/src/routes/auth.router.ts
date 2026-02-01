@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { catchErrors } from "../middlewares/error.middlewares";
-import { getSession, refresh, signIn, signOut, signUp } from "../controllers/auth.controllers";
+import { catchErrors } from "../middlewares/error.middlewares.js";
+import { getSession, refresh, signIn, signOut, signUp } from "../controllers/auth.controllers.js";
 
 
 

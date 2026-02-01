@@ -4,7 +4,7 @@ import {
   PASSWORD_MIN,
   USERNAME_MAX,
   USERNAME_MIN,
-} from "../constants";
+} from "../constants/index.js";
 
 export const UsernameSchema = z
   .string()
