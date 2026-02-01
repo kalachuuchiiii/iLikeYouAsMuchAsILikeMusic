@@ -1,0 +1,8 @@
+
+{
+    "name": "@repo/nonesense",
+    "private": true,
+    "exports": {
+        ".": "./index.ts"
+    }
+}
