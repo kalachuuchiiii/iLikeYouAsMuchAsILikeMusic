@@ -5,7 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "build": "tsup",
+    "build": "tsc --noEmit && tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch index.ts"
   },
