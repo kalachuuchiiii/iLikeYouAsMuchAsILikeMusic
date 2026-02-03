@@ -1,14 +1,10 @@
-
-import { createServer } from './createServer';
+import { createServer } from "./api/createServer";
 
 
 
 declare module "express-serve-static-core" {
   interface Request {
-    user?: {
-      id: string;
-      email: string;
-    };
+     myId?: string;
   }
 }
 
