@@ -2,19 +2,21 @@
 import { createServer } from './createServer';
 
 
-declare global {
-  namespace Express {
-    interface Request {
-      myId?: string
-    }
+
+declare module "express-serve-static-core" {
+  interface Request {
+    user?: {
+      id: string;
+      email: string;
+    };
   }
 }
 
 const app = createServer();
 
-app.listen(3000, () => {
-  console.log('listneing');
-})
-
+if (process.env.NODE_ENV !== 'production') {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => console.log(`Listening on ${port}`));
+}
 
 export default app;

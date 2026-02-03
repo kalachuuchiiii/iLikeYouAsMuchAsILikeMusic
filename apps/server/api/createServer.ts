@@ -1,4 +1,4 @@
-import express, { type Express } from "express";
+import express, { type Express, type Application } from "express";
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -8,7 +8,7 @@ import appRouter from "../src/routes/app.router";
 import { errorHandler } from "../src/middlewares/error.middlewares";
 
 export const createServer = () => {
-  const app: Express = express();
+  const app: Application = express();
   app.use(
     cors({
       origin: env.ORIGIN || "http://localhost:5173",
