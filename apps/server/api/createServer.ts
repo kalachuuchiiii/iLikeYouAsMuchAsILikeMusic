@@ -8,7 +8,7 @@ import appRouter from "../src/routes/app.router";
 import { errorHandler } from "../src/middlewares/error.middlewares";
 
 export const createServer = () => {
-  const app = express();
+  const app: Express = express();
   app.use(
     cors({
       origin: env.ORIGIN || "http://localhost:5173",

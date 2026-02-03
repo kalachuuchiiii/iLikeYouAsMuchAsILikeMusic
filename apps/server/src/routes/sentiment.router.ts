@@ -1,10 +1,10 @@
-import { Router } from "express";
+import express, { type Router } from 'express';
 import { createSentiment, getASingleSentiment, getMySentiments } from "../controllers/sentiment.controllers.js";
 import { catchErrors } from "../middlewares/error.middlewares.js";
 import { verifyAccessToken } from "../middlewares/auth.middlewares.js";
 
 
-const sentimentRouter = Router();
+const sentimentRouter: Router = express.Router();
 
 sentimentRouter.post('/', catchErrors(createSentiment));
 sentimentRouter.get('/me/list', verifyAccessToken, catchErrors(getMySentiments));

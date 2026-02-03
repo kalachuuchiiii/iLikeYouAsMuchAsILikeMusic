@@ -1,10 +1,10 @@
-import { Router } from "express";
+import express, { type Router } from 'express';
 import { catchErrors } from "../middlewares/error.middlewares.js";
 import { getSession, refresh, signIn, signOut, signUp } from "../controllers/auth.controllers.js";
 
 
 
-const authRouter = Router();
+const authRouter: Router = express.Router();
 
 authRouter.post('/sign-up', catchErrors(signUp));
 authRouter.post('/sign-in', catchErrors(signIn));
