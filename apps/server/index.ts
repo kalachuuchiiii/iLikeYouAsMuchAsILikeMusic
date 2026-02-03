@@ -1,3 +1,4 @@
+import { USERNAME_MIN } from "@repo/constants";
 import { createServer } from "./src/createServer.js";
 
 declare module "express-serve-static-core" {
@@ -7,6 +8,7 @@ declare module "express-serve-static-core" {
 }
 
 const app = createServer();
+
 
 if (process.env.NODE_ENV !== 'production') {
   const port = process.env.PORT || 3000;
