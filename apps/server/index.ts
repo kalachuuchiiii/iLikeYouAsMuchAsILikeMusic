@@ -1,6 +1,4 @@
-import { createServer } from "./api/createServer.js";
-
-
+import { createServer } from "./src/createServer.js";
 
 declare module "express-serve-static-core" {
   interface Request {

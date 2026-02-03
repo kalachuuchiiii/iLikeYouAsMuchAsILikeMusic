@@ -2,10 +2,10 @@ import express, { type Express, type Application } from "express";
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import env from "../src/config/env.js";
-import { connectDb } from "../src/config/database.js";
-import appRouter from "../src/routes/app.router.js";
-import { errorHandler } from "../src/middlewares/error.middlewares.js";
+import env from "./config/env.js";
+import { connectDb } from "./config/database.js";
+import appRouter from "./routes/app.router.js";
+import { errorHandler } from "./middlewares/error.middlewares.js";
 
 export const createServer = () => {
   const app: Application = express();
