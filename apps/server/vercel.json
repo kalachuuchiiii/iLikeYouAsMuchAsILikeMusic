@@ -1,9 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "dist/index.cjs", "use": "@vercel/node" }
+    { "src": "index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "dist/index.cjs" }
+    { "src": "/(.*)", "dest": "index.js" }
   ]
 }
